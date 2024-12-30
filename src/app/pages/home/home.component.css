@@ -1,5 +1,15 @@
-.nm-home{
- background-image: url('../../../../public/assets/Glxy.png');
- background-size: cover;
- min-height: 300px;
+.wrapper-nm-home{
+    min-height: 300px;
+}
+.welcome-phrase{
+    font-family: "IM Fell Great Primer SC";
+    font-size: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+.welcome-phrase > h1{
+    font-size: 5rem;
+}
+.welcome-phrase p{
+    color: #fff;
 }

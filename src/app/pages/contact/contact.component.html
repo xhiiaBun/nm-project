@@ -1,0 +1,33 @@
+<div class="container-fluid wrapper-nm-contact">
+    <div class="row justify-content-center text-center">
+        <div class="col-12 col-md-8">
+            <h1>Contact</h1>
+                <p>Feel free to contact me!</p>
+                <p>This form is not connected to an email delivery service yet.</p>
+                <div class="row justify-content-center">
+                    <div class="col-2 d-none d-sm-block">
+                        <img src="assets/Email-rav.png" class="raven-decor"/>
+                    </div>
+                    <div class="col-10">
+                        <form [formGroup]="contactForm" (ngSubmit)="submit()">
+                            <div class="one-row">
+                                <label for="email">*Email:</label>
+                                <input type="email" name="email" id="email"
+                                    formControlName="email"/>
+                            </div>
+                        
+                            <div class="one-row">
+                                <label for="message">*Message:</label>
+                                <textarea name="message" id="message" 
+                                 formControlName="message"></textarea>
+                            </div>
+
+                            <p class="text-end">*Required fields.</p>
+                            <button class="btn btn-primary"
+                                type="submit" [disabled]="contactForm.invalid">Send</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

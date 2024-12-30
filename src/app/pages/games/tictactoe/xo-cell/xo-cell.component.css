@@ -1,0 +1,24 @@
+.xo-cell-body{
+    border: 1px solid #fff;
+    width: 8rem;
+    height: 8rem;
+    background: transparent;
+    text-align: center;
+    font-size: 1rem;
+}
+.cover_x{
+    background: rgba(0, 0, 0, 0.5);
+    background-image: url('/assets/X.png');
+        background-size: cover;
+}
+.cover_o{
+    background: rgba(0, 0, 0, 0.5);
+    background-image: url('/assets/O2.png');
+        background-size: cover;
+}
+@media (max-width: 768px) {
+    .xo-cell-body{
+        width: 6rem;
+        height: 6rem;
+    }
+}

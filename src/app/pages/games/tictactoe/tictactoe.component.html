@@ -1,0 +1,34 @@
+<div class="row justify-content-center">
+    <h2 class="title-game">Tic-tac-toe</h2>
+    <div class="col-10 wr-board-ttt">
+        <div class="board-ttt">
+            <button (click)="resetGame()" class="btn btn-primary">Reset Game</button>
+            <button (click)="undoLastCell()" class="btn btn-secondary"
+            [disabled]="gameEnds || counterPlays ==  0">Undo</button>
+
+            @if(gameEnds){
+                <div class="msgGame">
+                @if(winner){
+                    <img src="assets/Winner-rav.png"/>
+                    <p>{{competitor ? 'Player X' : 'Player O'}}</p>
+                }
+                <p>{{messageGame}}</p>
+                </div>
+            }
+
+            <p class="turn_info">Current player: {{competitor ? 'X' : 'O'}}</p>
+            
+            
+            <div class="table-ttt">
+                @for(itemArray of boardArray; track itemArray.id){
+                     <xo-cell [cellInfo]="itemArray"
+                        [cellIndex]="itemArray.id"
+                        [statusCellDisabled]="itemArray.isDisabled"
+                        [coverCompetitor]="itemArray.isCompetitor"
+                        (sharingLastSelectionEvent)="receiveCellEvent($event)"   
+                    ></xo-cell>
+                }
+            </div>
+        </div>
+    </div>
+</div>

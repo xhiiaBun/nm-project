@@ -1,0 +1,33 @@
+<div class="container-fluid wrapper-nm-games">
+    <div class="row">
+        <!--col-lg-3 col-md-4 col-xs-12-->
+        <div class="col-lg-4 col-md-6 col-xs-12 wr-games-board">
+            <h1>Select a Game</h1>
+            <div>
+                <ul class="ul-games">
+                    <li>
+                        <a class="opt-game" routerLink="tictactoe" (click)="selectingAGame('tictactoe')">
+                            <div class="div-img-game">
+                                <img class="img-game" src="assets/tttgame.png"/>
+                            </div>
+                            <label class="name-game">Tic-tac-toe</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="opt-game" routerLink="guessword" (click)="selectingAGame('guessword')">
+                            <div class="div-img-game">
+                                <img class="img-game" src="assets/Soon.png"/>
+                            </div>
+                            <label class="name-game">Guess the word!</label>
+                        </a> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--col-lg-9 col-md-8 col-xs-12-->
+        <div class="col-lg-8 col-md-6 col-xs-12">            
+            <router-outlet />
+        </div>
+    </div>
+        
+</div>

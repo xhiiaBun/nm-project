@@ -1,0 +1,46 @@
+.wr-breadcrumbs{
+    text-align: start;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.title-game{
+    font-family: "IM Fell Great Primer SC";
+    margin: 12px 0px 0px;
+}
+.wr-board-ttt{
+    /* background: rgba(0, 0, 0, 0.5); */
+    min-height: 250px;
+}
+.board-ttt{
+    display: inline-table;
+    padding: 1.5rem 0rem;
+}
+.table-ttt{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 0;
+}
+.row-xo{
+    display: inline-block;
+}
+.turn_info{
+    font-size: 1.7rem;;
+}
+.msgGame{
+    position: absolute;
+    background: rgba(31, 52, 7, 0.8);
+    font-family: "IM Fell Great Primer SC";
+    font-size: 3.35rem;
+    padding: 1rem;
+    color: #fff;
+}
+.msgGame img{
+    width: 10rem;
+}
+
+@media (max-width: 576px) {
+    .msgGame {
+        font-size: 2.45rem;
+    }
+    
+}

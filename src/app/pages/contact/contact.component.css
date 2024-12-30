@@ -1,0 +1,24 @@
+.one-row{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: row;
+    padding: 0 0 1rem 0;
+    font-size: 1.5rem;
+}
+.one-row label{
+    width: 30%;
+}
+.one-row input, .one-row textarea{
+    width: 70%;
+}
+.raven-decor{
+    width: 10rem;
+}
+@media (max-width: 576px) {
+    .one-row label{
+        font-size: 1rem;
+    }
+    
+}
