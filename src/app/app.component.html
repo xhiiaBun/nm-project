@@ -2,42 +2,46 @@
 <div class="wrap-nm-container">
   <nav class="navbar sticky-top navbar-expand-md navbar-dark navbar-nm-nv">
     <div class="container-fluid">
-          <a class="navbar-brand" 
-              routerLink="/home"
-              routerLinkActive="active"
-              ariaCurrentWhenActive="page">
-                <img src="assets/Darklogo.png" class="logo-img" alt="Nightmore Project Logo">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-            <ul class="navbar-nav  mb-2 mb-lg-0 nm-nnav">
-              <li class="nav-item">
-                <a class="nav-link" 
-                    routerLink="/home"
-                    routerLinkActive="active"
-                    ariaCurrentWhenActive="page"
-                    >Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" 
-                    routerLink="/games"
-                    routerLinkActive="active"
-                    ariaCurrentWhenActive="page"
-                    >Games</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" 
-                    routerLink="/contact"
-                    routerLinkActive="active"
-                    ariaCurrentWhenActive="page"
-                    >Contact</a>
-              </li>
-            </ul>
-          </div>
+        <button #burgerNavBar class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+          data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" 
+            routerLink="/home"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page">
+              <img src="assets/Darklogo.png" class="logo-img" alt="Nightmore Project Logo">
+        </a>
+        <div #navbarNavDropdown class="collapse navbar-collapse justify-content-end" 
+        id="navbarNavDropdown">
+          <ul class="navbar-nav  mb-2 mb-lg-0 nm-nnav">
+            <li class="nav-item">
+              <a class="nav-link" 
+                  routerLink="/home"
+                  routerLinkActive="active"
+                  ariaCurrentWhenActive="page"
+                  (click)="closingNavbar()"
+                  >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" 
+                  routerLink="/games"
+                  routerLinkActive="active"
+                  ariaCurrentWhenActive="page"
+                  (click)="closingNavbar()"
+                  >Games</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" 
+                  routerLink="/contact"
+                  routerLinkActive="active"
+                  ariaCurrentWhenActive="page"
+                  (click)="closingNavbar()"
+                  >Contact</a>
+            </li>
+          </ul>
+        </div>
     </div>
   </nav>
   <main>
