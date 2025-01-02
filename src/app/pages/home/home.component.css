@@ -7,7 +7,13 @@
 .welcome-hi{
     font-family: "IM Fell Great Primer SC";
     font-size: 2rem;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0; 
+}
+.raven-cover{
+    background-image: url('/assets/real-ravn.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
 }
 .welcome-hi h1{
     font-size: 6rem;
@@ -27,21 +33,29 @@
 .home-description{
     padding: 1rem;
     font-size: 1.3rem;
-    background: #6d4585;
+    background: rgba(109, 69, 133, 1);
 }
 .wr-img-welcome{
     text-align: end;
     /* background-image: url('/assets/Glxy.png');  */
     /* background-size: cover; */
 }
+
 @media (max-width: 992px) {
     .welcome-hi h1{
         font-size: 5rem;
     }
     .rrvn{
         height: 10rem;
+        display: none;
     }
     .wr-img-welcome{
         text-align: center;
+    }
+    .wr-txt-welcome{
+        background: rgba(28, 9, 38, 0.5);
+    }
+    .raven-cover{
+        background-position: center;
     }
 }
