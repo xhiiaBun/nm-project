@@ -23,7 +23,16 @@
 }
 .letter-item{
     font-size: 1.5rem;
-    padding: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.btn-letter{
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    background: #018b8b;
+}
+.btn-letter:disabled{
+    background: #607D8B;
 }
 .msg-game{
     font-size: 1.5rem;

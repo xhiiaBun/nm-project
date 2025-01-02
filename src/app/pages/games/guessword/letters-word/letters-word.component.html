@@ -14,7 +14,7 @@
             <!-- <h2>Alphabet</h2> -->
             <div class="board-letters">
                 @for(letter of boardLetters; track $index){
-                    <button class="btn btn-light letter-item" (click)="clickLetter(letter)" value="{{letter.value}}" [disabled]="letter.isDisabled"
+                    <button class="btn btn-letter letter-item" (click)="clickLetter(letter)" value="{{letter.value}}" [disabled]="letter.isDisabled"
                         >{{letter.value}}</button>
                 }
             </div>
