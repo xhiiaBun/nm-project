@@ -1,13 +1,23 @@
 .wrapper-nm-home{
-    min-height: 300px;
+    height: 100%;
 }
 .rraven{
     width: 90%;
 }
+.ravn-mscot{
+    position: fixed;
+    max-width: 40%;
+    z-index: -1;
+    opacity: 0.3;
+    top: 20%;
+}
 .welcome-hi{
     font-family: "IM Fell Great Primer SC";
     font-size: 2rem;
-    margin: 1.5rem 0; 
+    margin: auto 
+}
+.welcome-bottom-txt{
+    margin: auto;
 }
 .raven-cover{
     background-image: url('/assets/real-ravn.png');
@@ -17,6 +27,7 @@
 }
 .welcome-hi h1{
     font-size: 6rem;
+    line-height: 5rem;
 }
 .welcome-phrase{
     font-family: "IM Fell Great Primer SC";
@@ -33,7 +44,7 @@
 .home-description{
     padding: 1rem;
     font-size: 1.3rem;
-    background: rgba(109, 69, 133, 1);
+    /* background: rgba(109, 69, 133, 1); */
 }
 .wr-img-welcome{
     text-align: end;
@@ -44,6 +55,11 @@
 @media (max-width: 992px) {
     .welcome-hi h1{
         font-size: 5rem;
+        line-height: 4rem;
+        margin-bottom: 2rem;
+    }
+    .welcome-phrase .blockquote{
+        font-size: 1.5rem;
     }
     .rrvn{
         height: 10rem;
@@ -57,5 +73,17 @@
     }
     .raven-cover{
         background-position: center;
+    }
+}
+@media(max-width: 768px){
+    .ravn-mscot{
+        max-width: 40%;
+        right: 0;
+    }
+}
+
+@media(max-width: 576px){
+    .ravn-mscot{
+        max-width: 100%;
     }
 }

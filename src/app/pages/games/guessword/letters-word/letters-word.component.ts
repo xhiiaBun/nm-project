@@ -13,7 +13,8 @@ import { CommonModule } from '@angular/common';
 export class LettersWordComponent implements OnInit{
   magic_word: string = "";
   arrayWord: string[] = [];
-  letters: string[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  keyArrayLetters: string = "QWERTYUIOPASDFGHJKLZXCVBNM";
+  letters: string[] = [];//['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   boardLetters: Itemxo[] = [];
   boardWord: Itemxo[] = [];
   sharedVal: any;
@@ -23,6 +24,7 @@ export class LettersWordComponent implements OnInit{
   constructor(private _wordService: WordService){}
 
   ngOnInit(): void {
+    this.letters = [...this.keyArrayLetters];
    this.requestWord();
   }
 

@@ -1,5 +1,13 @@
 .wrap-nm-container{
-    padding-bottom: 1rem;
+    height: 100vh;
+    display: block;
+    /* padding-bottom: 1rem; */
+}
+nav.navbar-nm-nv{
+    height: 20vh;
+}
+main{
+    height: 80vh;
 }
 .navbar-nm-nv{
     background: rgba(23, 15, 22, 0.96);

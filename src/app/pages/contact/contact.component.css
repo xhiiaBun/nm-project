@@ -1,3 +1,6 @@
+.wrapper-nm-contact{
+    height: 100%;
+}
 .one-row{
     display: flex;
     flex-wrap: nowrap;
