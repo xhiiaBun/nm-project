@@ -2,6 +2,7 @@
   "routes": [
     "/",
     "/contact",
+    "/error",
     "/games",
     "/games/guessword",
     "/games/tictactoe",
