@@ -1,5 +1,5 @@
 export interface Itemxo{
     id: number
     isDisabled: boolean
-    isCompetitor: string
+    value: string
 }

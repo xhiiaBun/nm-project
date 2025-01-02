@@ -13,7 +13,7 @@ import { Itemxo } from "../models/itemxo";
 })
 export class TictactoeComponent implements OnInit{
   mainNumber: number = 3;
-  boardArray: Itemxo[] = []
+  boardArray: Itemxo[] = [];
   lastCellTouched: number = -1;
   competitor: boolean = true;
   counterPlays: number = 0;
@@ -25,7 +25,7 @@ export class TictactoeComponent implements OnInit{
 
   constructor(){
     for(let i= 0; i < this.mainNumber*this.mainNumber; i++){
-      let obj = {id: i, isCompetitor: '', isDisabled: false};
+      let obj = {id: i, value: '', isDisabled: false};
         this.boardArray.push(obj);
     }
   }
@@ -35,7 +35,7 @@ export class TictactoeComponent implements OnInit{
   receiveCellEvent(txt: string){
     this.lastCellTouched = Number(txt);
     this.counterPlays++;
-    this.boardArray[this.lastCellTouched].isCompetitor = this.competitor ? "x" : "o";
+    this.boardArray[this.lastCellTouched].value = this.competitor ? "x" : "o";
     this.registerMove(); 
     this.trackingGame();
     if(!this.gameEnds){
@@ -53,7 +53,7 @@ export class TictactoeComponent implements OnInit{
       this.player2.pop();
     }
     this.competitor = !this.competitor;
-    this.boardArray[this.lastCellTouched].isCompetitor = "";
+    this.boardArray[this.lastCellTouched].value = "";
   }
   resetGame(): void{
     this.lastCellTouched = -1;
@@ -68,7 +68,7 @@ export class TictactoeComponent implements OnInit{
 
   clearCellArray(): void{
     this.boardArray.forEach(item => {
-      item.isCompetitor = '';
+      item.value = '';
       item.isDisabled = false
     });
   }

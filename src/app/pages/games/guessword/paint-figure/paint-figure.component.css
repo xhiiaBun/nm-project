@@ -1,0 +1,10 @@
+.attempts_data{
+    font-size: 1.3rem;
+}
+.something{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}

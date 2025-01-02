@@ -24,7 +24,7 @@
                      <xo-cell [cellInfo]="itemArray"
                         [cellIndex]="itemArray.id"
                         [statusCellDisabled]="itemArray.isDisabled"
-                        [coverCompetitor]="itemArray.isCompetitor"
+                        [coverCompetitor]="itemArray.value"
                         (sharingLastSelectionEvent)="receiveCellEvent($event)"   
                     ></xo-cell>
                 }

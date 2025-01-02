@@ -2,6 +2,27 @@
 <div class="row justify-content-center">
     <h2 class="title-game">Guess the Word</h2>
     <div class="col-10">
-        <img class="coming-soon" alt="Coming soon" src="assets/soon-rav.png"/>
+        <div class="text-end">
+            <button class="btn btn-primary" (click)="reNewGame()">New Game</button>
+        </div>
+        
+        <!-- <img class="coming-soon" alt="Coming soon" src="assets/soon-rav.png"/> -->
+        @if(magic_word){
+            <div class="row">
+                <div class="col-lg-6 col-xs-12">
+                    <paint-figure></paint-figure>
+                </div>
+                <div class="col-lg-6 col-xs-12">
+                    <letters-word></letters-word>
+                </div>
+            </div>
+        }
+
+        @else {
+            <div>
+                NO WORD LOADED
+            </div>
+        }
+        
     </div>
 </div>

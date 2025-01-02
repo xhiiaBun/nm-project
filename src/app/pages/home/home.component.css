@@ -1,15 +1,47 @@
 .wrapper-nm-home{
     min-height: 300px;
 }
-.welcome-phrase{
+.rraven{
+    width: 90%;
+}
+.welcome-hi{
     font-family: "IM Fell Great Primer SC";
     font-size: 2rem;
-    margin-top: 3rem;
-    text-align: center;
+    margin: 1.5rem 0;
 }
-.welcome-phrase > h1{
-    font-size: 5rem;
+.welcome-hi h1{
+    font-size: 6rem;
+}
+.welcome-phrase{
+    font-family: "IM Fell Great Primer SC";
+}
+.welcome-phrase .blockquote{
+    font-size: 2rem;
+}
+.blockquote .name-author{
+    color: #b9a2c6;
 }
 .welcome-phrase p{
     color: #fff;
+}
+.home-description{
+    padding: 1rem;
+    font-size: 1.3rem;
+    background: #6d4585;
+}
+.wr-img-welcome{
+    text-align: end;
+    /* background-image: url('/assets/Glxy.png');  */
+    /* background-size: cover; */
+}
+@media (max-width: 992px) {
+    .welcome-hi h1{
+        font-size: 5rem;
+    }
+    .rrvn{
+        height: 10rem;
+    }
+    .wr-img-welcome{
+        text-align: center;
+    }
 }

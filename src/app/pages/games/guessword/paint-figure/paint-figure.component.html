@@ -1,0 +1,16 @@
+
+@if(magic_word){
+    <div>
+        <!-- <h2>Figure</h2> -->
+        <div class="attempts_data">
+            @if(numberAttempts == 0){
+                <p>Good luck next time.</p>
+            }
+            @else {
+                 <p>You have <span>{{numberAttempts || mg_len}}</span> attempts from {{mg_len}}.</p>
+            }
+           
+        </div>        
+        
+    </div>
+}

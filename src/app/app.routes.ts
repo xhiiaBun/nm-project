@@ -8,6 +8,10 @@ export const routes: Routes = [
             import('./pages/main-pages.routes').then((home) => home.routes)
     },
     {
+        path: 'error',
+        loadComponent: () => import('./500/error-page/error-page.component').then((e) => e.ErrorPageComponent)
+    },
+    {
         path: '**',
         loadComponent: () => import('./404/404.component').then((error) => error.NoFoundComponent)
     }
