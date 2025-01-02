@@ -12,7 +12,7 @@
         </div>
         <div class="col-12">
             <!-- <h2>Alphabet</h2> -->
-            <div>
+            <div class="board-letters">
                 @for(letter of boardLetters; track $index){
                     <button class="letter-item" (click)="clickLetter(letter)" value="{{letter.value}}" [disabled]="letter.isDisabled"
                         >{{letter.value}}</button>
