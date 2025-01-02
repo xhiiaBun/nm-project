@@ -13,6 +13,9 @@
 .foundLetter{
     background: darkcyan;
 }
+.letter-item{
+    font-size: 2rem;
+}
 .msg-game{
     font-size: 1.5rem;
     color: #018b8b;
