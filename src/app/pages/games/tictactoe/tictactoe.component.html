@@ -1,4 +1,4 @@
-<div class="row justify-content-center">
+<div class="row justify-content-center wrapper-nm-tictactoe fadeOut">
     <h2 class="title-game">Tic-tac-toe</h2>
     <div class="col-10 wr-board-ttt">
         <div class="board-ttt">
@@ -16,7 +16,9 @@
                 </div>
             }
 
-            <p class="turn_info">Current player: {{competitor ? 'X' : 'O'}}</p>
+            <p class="turn_info">Current player: 
+                    <span [ngClass]="{'color_X': competitor, 'color_O': !competitor}">{{competitor ? 'X' : 'O'}}</span>
+                </p>
             
             
             <div class="table-ttt">

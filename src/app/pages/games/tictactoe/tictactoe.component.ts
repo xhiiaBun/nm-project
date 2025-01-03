@@ -2,12 +2,13 @@ import { Component, OnInit} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { XoCellComponent } from "./xo-cell/xo-cell.component";
 import { Itemxo } from "../models/itemxo";
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-tictactoe',
   standalone: true,
-  imports: [RouterModule, XoCellComponent],
+  imports: [RouterModule, XoCellComponent, CommonModule],
   templateUrl: './tictactoe.component.html',
   styleUrl: './tictactoe.component.css'
 })
@@ -35,7 +36,7 @@ export class TictactoeComponent implements OnInit{
   receiveCellEvent(txt: string){
     this.lastCellTouched = Number(txt);
     this.counterPlays++;
-    this.boardArray[this.lastCellTouched].value = this.competitor ? "x" : "o";
+    this.boardArray[this.lastCellTouched].value = this.competitor ? "X" : "O";
     this.registerMove(); 
     this.trackingGame();
     if(!this.gameEnds){

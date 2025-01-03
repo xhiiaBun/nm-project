@@ -4,21 +4,21 @@
     height: 8rem;
     background: transparent;
     text-align: center;
-    font-size: 1rem;
+    font-size: 8rem;
+    line-height: 8rem;
+    font-family: "Fredericka the Great", serif;
 }
-.cover_x{
-    background: rgba(0, 0, 0, 0.5);
-    background-image: url('/assets/X.png');
-        background-size: cover;
+.cover_X{
+    color: #b256ea;
 }
-.cover_o{
-    background: rgba(0, 0, 0, 0.5);
-    background-image: url('/assets/O2.png');
-        background-size: cover;
+.cover_O{
+    color: #008b8b;
 }
 @media (max-width: 768px) {
     .xo-cell-body{
         width: 6rem;
         height: 6rem;
+        font-size: 6rem;
+        line-height: 6rem;
     }
 }

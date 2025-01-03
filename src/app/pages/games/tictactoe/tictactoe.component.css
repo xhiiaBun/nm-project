@@ -1,3 +1,7 @@
+.wrapper-nm-tictactoe{
+    visibility: 1;
+    transition: vi;
+}
 .wr-breadcrumbs{
     text-align: start;
     font-size: 1.2rem;
@@ -24,7 +28,11 @@
     display: inline-block;
 }
 .turn_info{
-    font-size: 1.7rem;;
+    font-size: 1.7rem;
+}
+.turn_info > span{
+    font-size: 2rem;
+    font-family: "Fredericka the Great", serif;
 }
 .msgGame{
     position: absolute;
@@ -37,6 +45,12 @@
 .msgGame img{
     width: 10rem;
 }
+.color_X{
+    color: #b256ea;
+}
+.color_O{
+    color: #008b8b;
+}
 
 @media (max-width: 576px) {
     .msgGame {
@@ -44,3 +58,19 @@
     }
     
 }
+
+/* animations */
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+ 
+ @keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+ 
+ .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+ }

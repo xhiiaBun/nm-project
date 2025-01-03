@@ -1,3 +1,6 @@
+.wrapper-nm-guessword{
+
+}
 .title-game{
     font-family: "IM Fell Great Primer SC";
     margin: 12px 0px 0px;
@@ -6,3 +9,19 @@
     width: 100%;
     margin-top: 1rem;
 }
+
+/* animations */
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+ 
+ @keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+ 
+ .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+ }

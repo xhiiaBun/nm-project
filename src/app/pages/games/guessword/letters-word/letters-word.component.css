@@ -11,7 +11,7 @@
     border-bottom: 1px solid #fff;
 }
 .foundLetter{
-    background: darkcyan;
+    background: #008b8b;
 }
 .board-letters{
     display: flex;

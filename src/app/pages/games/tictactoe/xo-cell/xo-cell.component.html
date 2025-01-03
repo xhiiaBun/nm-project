@@ -1,3 +1,4 @@
-<button class="xo-cell-body cover_{{cellInfo.value}}" (click)="onClickCell(cellIndex)" 
+<button class="xo-cell-body cover_{{cellInfo.value}}" value={{cellInfo.value}} (click)="onClickCell(cellIndex)" 
         [disabled]="cellInfo.isDisabled">
+        {{cellInfo.value}}
 </button>
