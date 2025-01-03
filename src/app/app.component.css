@@ -30,9 +30,23 @@ main{
     color: #fff;
     text-decoration: underline;
 }
+nav.navbar-nm-nv{
+    height: 20vh;
+}
+main{
+    height: 80vh;
+}
 @media (max-width: 768px) {
     .logo-img{
         width: 250px;
+    }
+}
+@media(max-width: 576px){
+    nav.navbar-nm-nv{
+        height: 12vh;
+    }
+    main{
+        height: 88vh;
     }
 }
 @media (max-width: 375px) {

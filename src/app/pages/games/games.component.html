@@ -1,36 +1,38 @@
 <div class="container-fluid wrapper-nm-games">
     <div class="row">
-
-        <!--left games menu -->
-        <div class="col-lg-4 col-md-6 col-xs-12 wr-games-board">
-            <h1>Select a Game</h1>
+        <div class="smart-col-games" [ngClass]="{'moving-left': gselected}">
+            @if(!showOutlet){
+                 <h1 class="select-game animated" [ngClass]="{'fadeOut size-0': gselected}">
+                    Select a Game
+                </h1>
+            }
             <div>
                 <ul class="ul-games">
                     <li>
                         <a class="opt-game" routerLink="tictactoe" (click)="selectingAGame('tictactoe')">
-                            <div class="div-img-game">
-                                <img class="img-game" src="assets/tttgame.png"/>
+                            <div class="div-img-game" [ngClass]="{'fadeOut-div': showOutlet}">
+                                <img class="img-game" [ngClass]="{'game-smaller': gselected}" src="assets/tttgame.png"/>
                             </div>
-                            <label class="name-game">Tic-tac-toe</label>
+                            <label class="name-game" [ngClass]="{'game-name-smaller': gselected, 'btn-game-look': showOutlet}"
+                                        >Tic-tac-toe</label>
                         </a>
                     </li>
                     <li>
                         <a class="opt-game" routerLink="guessword" (click)="selectingAGame('guessword')">
-                            <div class="div-img-game">
-                                <img class="img-game" src="assets/Soon.png"/>
+                            <div class="div-img-game" [ngClass]="{'fadeOut-div': showOutlet}">
+                                <img class="img-game" [ngClass]="{'game-smaller': gselected}" src="assets/wgame.png"/>
                             </div>
-                            <label class="name-game">Guess the word!</label>
+                            <label class="name-game" [ngClass]="{'game-name-smaller': gselected, 'btn-game-look': showOutlet}"
+                                        >Guess the word!</label>
                         </a> 
                     </li>
                 </ul>
             </div>
         </div>
-
-        
-        <!--current game-->
-        <div class="col-lg-8 col-md-6 col-xs-12">            
-            <router-outlet />
+        <div class="smart-col-router-outlet" [ngClass]="{'giving-space': gselected}">
+            @if(showOutlet){
+                <router-outlet />
+            }
         </div>
     </div>
-        
 </div>

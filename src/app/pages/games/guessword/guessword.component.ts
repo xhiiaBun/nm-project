@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { wordGuardResolver } from '../../../guards/word-guard.resolver';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-guessword',
   standalone: true,
-  imports: [LettersWordComponent, PaintFigureComponent],
+  imports: [LettersWordComponent, PaintFigureComponent, CommonModule],
   templateUrl: './guessword.component.html',
   styleUrl: './guessword.component.css'
 })

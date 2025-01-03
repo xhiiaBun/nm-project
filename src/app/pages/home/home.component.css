@@ -54,6 +54,9 @@
         line-height: 4rem;
         margin-bottom: 2rem;
     }
+    .welcome-phrase{
+        text-align: center;
+    }
     .welcome-phrase .blockquote{
         font-size: 1.5rem;
     }
@@ -70,6 +73,9 @@
     .raven-cover{
         background-position: center;
     }
+}
+@media (max-width: 768px){
+    
 }
 @media (max-width: 576px){
     .home-description{

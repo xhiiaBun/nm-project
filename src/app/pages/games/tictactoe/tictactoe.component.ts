@@ -80,13 +80,15 @@ export class TictactoeComponent implements OnInit{
         this.messageGame = "is the Winner!";
         this.winner = true;
         this.lockGame();
+      }else{
+        if(this.counterPlays === 9){
+          this.messageGame = "Nobody wins";
+            this.winner = false; 
+            this.lockGame();
+        }
       }
     }
-    if(this.counterPlays === 9){
-      this.messageGame = "Nobody wins";
-        this.winner = false; 
-        this.lockGame();
-    }
+    
   }
 
   registerMove(){
