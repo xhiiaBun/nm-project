@@ -1,7 +1,7 @@
 @if(magic_word){
     <div class="row">
         <div class="col-12">
-            <p class="msg-game">{{messageGame}}</p>
+            <p class="msg-game" [ngClass]="{'size-3': gameEnds}">{{messageGame}}</p>
             <div class="board-word">
                 @for(onechar of boardWord; track $index){
                     <div class="item-word" [ngClass]="{'foundLetter': onechar.isDisabled}">

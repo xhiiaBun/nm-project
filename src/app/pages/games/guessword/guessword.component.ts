@@ -32,6 +32,7 @@ export class GuesswordComponent implements OnInit{
       this.dataResponse = data.toString().toUpperCase();
       this.magic_word = this.dataResponse;
       this._wordService.sharedWord(this.dataResponse);
+      this._wordService.updateAttempt(this.magic_word.length);
     });
   }
 

@@ -16,7 +16,9 @@ export class WordService {
   constructor(private _http: HttpClient) { }
 
   requestWord() {
-    return this._http.get(this.url);
+    let lenWord = this.getRandomNum(5, 10);
+    let completeURL = this.url + '?length=' + lenWord;
+    return this._http.get(completeURL);
   }
 
   sharedWord(val: any){
@@ -25,6 +27,11 @@ export class WordService {
 
   updateAttempt(attemptNumber: number){
     this.sharedAttempt.next(attemptNumber);
+  }
+
+  getRandomNum(min: number = 0, max: number): number{
+    let num = Math.floor(Math.random() * (max-min)) + min;
+    return num;
   }
 
 }

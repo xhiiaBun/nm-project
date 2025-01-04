@@ -12,8 +12,12 @@
     margin: 12px 0px 0px;
 }
 .wr-board-ttt{
-    /* background: rgba(0, 0, 0, 0.5); */
     min-height: 250px;
+}
+.actions-ttt{
+    display: flex;
+    padding: 0.5rem 0;
+    justify-content: space-evenly;
 }
 .board-ttt{
     display: inline-table;
@@ -27,16 +31,29 @@
 .row-xo{
     display: inline-block;
 }
-.turn_info{
-    font-size: 1.7rem;
+.info-competitors{
+    display: inline-block;
 }
-.turn_info > span{
+.turn_info{
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-family: "IM Fell Great Primer SC";
+    margin: auto 0.5rem;
+}
+.endGame{
     font-size: 2rem;
+    color: #ffffff;
     font-family: "Fredericka the Great", serif;
+    margin: auto 0.5rem;
+    transition: font-size 2s;
+}
+.size-3{
+    font-size: 3rem;
 }
 .msgGame{
     position: absolute;
-    background: rgba(31, 52, 7, 0.8);
+    z-index: 2;
+    background: rgba(31, 52, 7, 0.9);
     font-family: "IM Fell Great Primer SC";
     font-size: 3.35rem;
     padding: 1rem;
@@ -73,4 +90,17 @@
  .fadeOut {
     -webkit-animation-name: fadeOut;
     animation-name: fadeOut;
+ }
+ @-webkit-keyframes shakeOn {
+    0% {font-size: 2rem;}
+    100% {font-size: 3rem;}
+ }
+ 
+ @keyframes shakeOn {
+    0% {font-size: 2rem;}
+    100% {font-size: 3rem;}
+ }
+ .shakeOn{
+    -webkit-animation-name: shakeOn;
+    animation-name: shakeOn;
  }

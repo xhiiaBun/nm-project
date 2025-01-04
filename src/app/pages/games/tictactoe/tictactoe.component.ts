@@ -18,9 +18,12 @@ export class TictactoeComponent implements OnInit{
   lastCellTouched: number = -1;
   competitor: boolean = true;
   counterPlays: number = 0;
+  namePlayer: string = "Player X";
   messageGame: string = "";
+  showMessage: boolean = false;
   gameEnds: boolean = false;
   winner: boolean = false;
+  blockOneUndo:  boolean = false;
   player1: number[] = [];
   player2: number[] = [];
 
@@ -42,10 +45,12 @@ export class TictactoeComponent implements OnInit{
     if(!this.gameEnds){
       this.competitor = !this.competitor;
     }
-    
+    this.blockOneUndo = false;
+    this.namePlayer = this.competitor ? 'Player X': 'Player O';
   }
 
   undoLastCell(): void{
+    this.competitor = !this.competitor;
     this.boardArray[this.lastCellTouched].isDisabled = false;
     this.counterPlays--;
     if(this.competitor){
@@ -53,8 +58,9 @@ export class TictactoeComponent implements OnInit{
     }else{
       this.player2.pop();
     }
-    this.competitor = !this.competitor;
     this.boardArray[this.lastCellTouched].value = "";
+    this.namePlayer = this.competitor ? 'Player X': 'Player O';
+    this.blockOneUndo = true;
   }
   resetGame(): void{
     this.lastCellTouched = -1;
@@ -65,6 +71,8 @@ export class TictactoeComponent implements OnInit{
     this.player2 = [];
     this.gameEnds = false; 
     this.winner = false;
+    this.showMessage = false;
+    this.namePlayer = this.competitor ? 'Player X': 'Player O';
   }
 
   clearCellArray(): void{
@@ -78,7 +86,7 @@ export class TictactoeComponent implements OnInit{
     let currentplayer = this.competitor ? this.player1 : this.player2;
     if(this.counterPlays > 4){
       if(this.reviewIsAWin(currentplayer)){
-        this.messageGame = "is the Winner!";
+        this.messageGame = " is the Winner!";
         this.winner = true;
         this.lockGame();
       }else{
@@ -121,6 +129,17 @@ export class TictactoeComponent implements OnInit{
     this.boardArray.forEach(item => {
       item.isDisabled = true
     });
+    setTimeout(()=> {
+      this.showMessage = true;
+    }, 100);
+  }
+
+  blockUndoBtn(): boolean{
+    if(this.gameEnds || this.counterPlays === 0 || this.blockOneUndo){
+      return true;
+    }else{
+      return false;
+    }
   }
 
 }

@@ -20,6 +20,7 @@ export class LettersWordComponent implements OnInit{
   sharedVal: any;
   messageGame: string = "";
   numberTries: number = 0;
+  gameEnds: boolean = false;
 
   constructor(private _wordService: WordService){}
 
@@ -39,6 +40,7 @@ export class LettersWordComponent implements OnInit{
     this.numberTries = this.magic_word.length;
     this.arrayWord = [...this.magic_word];
     this.messageGame = "";
+    this.gameEnds = false;
     this.boardWord = this.arrayWord.map((letter, index) => { 
       return {id: index, value: letter, isDisabled: false }
     });
@@ -98,7 +100,7 @@ export class LettersWordComponent implements OnInit{
   } 
 
   lockGame(wordFound: boolean){
-    this.messageGame = wordFound ? "YOU FOUND THE WORD" : "YOU DIDN'T FOUND THE WORD";
+    this.messageGame = wordFound ? "You found the word!" : "You didn't find the word";
     this.boardLetters.forEach(letter => {
       letter.isDisabled = true;
     });
@@ -108,6 +110,13 @@ export class LettersWordComponent implements OnInit{
         letter.isDisabled = true;
       });
     }
+
+    if(wordFound){
+      setTimeout(()=> {
+        this.gameEnds = true;
+      }, 100);
+    }
+    
   }
 
 }
