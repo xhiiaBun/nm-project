@@ -12,7 +12,7 @@
         </div>
         <div class="row">
             @if(gameEnds){
-                <p class="endGame" [ngClass]="{'color_X': competitor && winner, 'color_O': !competitor && winner, 'size-3': showMessage}">
+                <p class="endGame" [ngClass]="{'color_X': competitor && winner, 'color_O': !competitor && winner, 'size-2h': showMessage}">
                     {{winner ? namePlayer + messageGame : messageGame}}
                 </p>
             }

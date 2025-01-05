@@ -2,6 +2,22 @@
     height: 100%;
     text-align: center;
     font-size: 3rem;
+    background-image: url('/assets/ggbckg25.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.cover-bck-guessword{
+    background-image: url('/assets/wordbckg25.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.cover-bck-tttword{
+    background-image: url('/assets/tttbckg25.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
 }
 .paint-wr{
     background: red;
@@ -122,6 +138,11 @@
     .btn-game-look{
         border-top: 1px solid white;
         border-bottom: 1px solid white;
+    }
+}
+@media (max-width: 576px) {
+    .wrapper-nm-games, .cover-bck-guessword, .cover-bck-tttword{
+        background-position: bottom;
     }
 }
 

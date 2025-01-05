@@ -1,5 +1,4 @@
 .wrapper-nm-guessword{
-
 }
 .title-game{
     font-family: "IM Fell Great Primer SC";
@@ -9,7 +8,9 @@
     width: 100%;
     margin-top: 1rem;
 }
-
+.loading-word{
+    font-family: "Fredericka the Great", serif;
+}
 /* animations */
 @-webkit-keyframes fadeOut {
     0% {opacity: 1;}

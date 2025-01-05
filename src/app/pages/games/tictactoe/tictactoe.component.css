@@ -27,6 +27,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     font-size: 0;
+    background: rgb(20, 22, 22, 0.7);
 }
 .row-xo{
     display: inline-block;
@@ -47,8 +48,8 @@
     margin: auto 0.5rem;
     transition: font-size 2s;
 }
-.size-3{
-    font-size: 3rem;
+.size-2h{
+    font-size: 2.5rem;
 }
 .msgGame{
     position: absolute;
