@@ -31,6 +31,11 @@
     border: 1px solid #ffffff;
     background: #018b8b;
 }
+.btn-letter.active, .btn-letter:focus-visible, 
+.btn-letter:hover, .btn-letter:focus, .btn-letter:focus-within
+{
+    outline: 4px solid #9C27B0;
+}
 .btn-letter:disabled{
     background: #607D8B;
 }

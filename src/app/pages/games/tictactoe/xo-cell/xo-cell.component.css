@@ -10,6 +10,11 @@
     border-radius: 0;
     margin: 0;
 }
+.btn-ttt.active, .btn-ttt:focus-visible, 
+.btn-ttt:hover, .btn-ttt:focus, .btn-ttt:focus-within
+{
+    outline: 4px solid #009688;
+}
 .cover_X{
     color: #b256ea;
 }
