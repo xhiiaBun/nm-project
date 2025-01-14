@@ -28,7 +28,7 @@ export class GuesswordComponent implements OnInit{
   }
 
   reNewGame(): void{
-    this._wordService.requestWord().subscribe(data => {
+    this._wordService.requestWord().pipe(take(1)).subscribe(data => {
       this.dataResponse = data.toString().toUpperCase();
       this.magic_word = this.dataResponse;
       this._wordService.sharedWord(this.dataResponse);

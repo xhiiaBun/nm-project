@@ -23,6 +23,13 @@ export class PaintFigureComponent implements OnInit{
         this.numberAttempts = this.magic_word.length;
       });
 
+      // this._wordService.sharedAttempt$.subscribe({
+      //   next: () => {},
+      //   complete: () => {
+
+      //   }
+      // });
+
       this._wordService.sharedAttempt$.subscribe((isAttemptGood) => {
           this.numberAttempts = isAttemptGood;
       });

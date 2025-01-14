@@ -1,8 +1,7 @@
 import { Routes } from '@angular/router';
 import { TictactoeComponent } from './games/tictactoe/tictactoe.component';
 import { GuesswordComponent } from './games/guessword/guessword.component';
-import { wordGuardResolver } from '../guards/word-guard.resolver';
-import { WordService } from './games/services/get-word-service.service';
+import { BuildletterComponent } from './games/buildletter/buildletter.component';
 
 export const routes: Routes = [
     {
@@ -23,9 +22,10 @@ export const routes: Routes = [
                 {
                     path: 'guessword',
                     component: GuesswordComponent,
-                    // resolve :{
-                    //     wordData: [wordGuardResolver]
-                    // }
+                },
+                {
+                    path: 'buildletter',
+                    component: BuildletterComponent
                 }
             ]
     },

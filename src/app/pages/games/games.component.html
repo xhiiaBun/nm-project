@@ -26,6 +26,15 @@
                                         >Guess the word!</label>
                         </a> 
                     </li>
+                    <li>
+                        <a class="opt-game" routerLink="buildletter" (click)="selectingAGame('buildletter')">
+                            <div class="div-img-game" [ngClass]="{'fadeOut-div': showOutlet}">
+                                <img class="img-game" [ngClass]="{'game-smaller': gselected}" alt="coming soon" src="assets/Soon.png"/>
+                            </div>
+                            <label class="name-game" [ngClass]="{'game-name-smaller': gselected, 'btn-game-look': showOutlet}"
+                                        >Build your letter</label>
+                        </a> 
+                    </li>
                 </ul>
             </div>
         </div>
