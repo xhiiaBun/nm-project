@@ -1,26 +1,28 @@
 
-<div class="row justify-content-center wrapper-nm-guessword">
+@if(displayGW){
+    <div class="row justify-content-center wrapper-nm-guessword">
     <h2 class="title-game">Guess the Word</h2>
-    <div class="col-10">
-        @if(magic_word){
-        <div class="text-end">
-            <button class="btn btn-primary" (click)="reNewGame()">New Game</button>
-        </div>
-            <div class="row">
-                <div class="col-lg-4 col-xs-12">
-                    <paint-figure></paint-figure>
-                </div>
-                <div class="col-lg-8 col-xs-12">
-                    <letters-word></letters-word>
-                </div>
+        <div class="col-10">
+            @if(magic_word){
+            <div class="text-end">
+                <button class="btn btn-primary" (click)="reNewGame()">New Game</button>
             </div>
-        }
+                <div class="row">
+                    <div class="col-lg-4 col-xs-12">
+                        <paint-figure></paint-figure>
+                    </div>
+                    <div class="col-lg-8 col-xs-12">
+                        <letters-word></letters-word>
+                    </div>
+                </div>
+            }
 
-        @else {
-            <div class="loading-word">
-                Loading word...
-            </div>
-        }
-        
+            @else {
+                <div class="loading-word">
+                    Loading word...
+                </div>
+            }
+            
+        </div>
     </div>
-</div>
+}

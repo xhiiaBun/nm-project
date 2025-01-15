@@ -1,47 +1,19 @@
-<div class="row justify-content-center wrapper-nm-tictactoe">
+@if(displayTT){
+    <div class="row justify-content-center wrapper-nm-tictactoe">
     <h2 class="title-game">Tic-tac-toe</h2>
-    <div class="col-10 wr-board-ttt">
-        <div class="row">
-            <div class="actions-ttt">
-                <button (click)="resetGame()" class="btn btn-primary">
-                    {{gameEnds  ? 'New Game' : 'Reset Game'}}
-                </button>
-                <button (click)="undoLastCell()" class="btn btn-secondary"
-                [disabled]="blockUndoBtn()">Undo</button>
+        <div class="col-10 wr-board-ttt">
+            <div class="row">
+                <div class="actions-ttt">
+                    <button (click)="resetGame()" class="btn btn-primary">
+                        {{gameEnds  ? 'New Game' : 'Reset Game'}}
+                    </button>
+                    <button (click)="undoLastCell()" class="btn btn-secondary"
+                    [disabled]="blockUndoBtn()">Undo</button>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            @if(gameEnds){
-                <p class="endGame" [ngClass]="{'color_X': competitor && winner, 'color_O': !competitor && winner, 'size-2h': showMessage}">
-                    {{winner ? namePlayer + messageGame : messageGame}}
-                </p>
-            }
-            @else {
-                <p class="turn_info">
-                    <span [ngClass]="{'color_X': competitor, 'color_O': !competitor}">{{namePlayer}}</span> turn.</p>
-            }
-        </div>
-        <div class="board-ttt">
-            <div class="table-ttt">
-                @for(itemArray of boardArray; track itemArray.id){
-                     <xo-cell [cellInfo]="itemArray"
-                        [cellIndex]="itemArray.id"
-                        [statusCellDisabled]="itemArray.isDisabled"
-                        [coverCompetitor]="itemArray.value"
-                        (sharingLastSelectionEvent)="receiveCellEvent($event)"   
-                    ></xo-cell>
-                }
-            </div>
-        </div>
-        <!-- <div class="board-ttt">
-            <div>
-                <button (click)="resetGame()" class="btn btn-primary">Reset Game</button>
-                <button (click)="undoLastCell()" class="btn btn-secondary"
-                [disabled]="blockUndoBtn()">Undo</button>
-            </div>
-            <div class="info-competitors">
-                @if(showMessage){
-                    <p class="endGame shake" [ngClass]="{'color_X': competitor && winner, 'color_O': !competitor && winner}">
+            <div class="row">
+                @if(gameEnds){
+                    <p class="endGame" [ngClass]="{'color_X': competitor && winner, 'color_O': !competitor && winner, 'size-2h': showMessage}">
                         {{winner ? namePlayer + messageGame : messageGame}}
                     </p>
                 }
@@ -50,16 +22,47 @@
                         <span [ngClass]="{'color_X': competitor, 'color_O': !competitor}">{{namePlayer}}</span> turn.</p>
                 }
             </div>
-            <div class="table-ttt">
-                @for(itemArray of boardArray; track itemArray.id){
-                     <xo-cell [cellInfo]="itemArray"
-                        [cellIndex]="itemArray.id"
-                        [statusCellDisabled]="itemArray.isDisabled"
-                        [coverCompetitor]="itemArray.value"
-                        (sharingLastSelectionEvent)="receiveCellEvent($event)"   
-                    ></xo-cell>
-                }
+            <div class="board-ttt">
+                <div class="table-ttt">
+                    @for(itemArray of boardArray; track itemArray.id){
+                        <xo-cell [cellInfo]="itemArray"
+                            [cellIndex]="itemArray.id"
+                            [statusCellDisabled]="itemArray.isDisabled"
+                            [coverCompetitor]="itemArray.value"
+                            (sharingLastSelectionEvent)="receiveCellEvent($event)"   
+                        ></xo-cell>
+                    }
+                </div>
             </div>
-        </div> -->
+            <!-- <div class="board-ttt">
+                <div>
+                    <button (click)="resetGame()" class="btn btn-primary">Reset Game</button>
+                    <button (click)="undoLastCell()" class="btn btn-secondary"
+                    [disabled]="blockUndoBtn()">Undo</button>
+                </div>
+                <div class="info-competitors">
+                    @if(showMessage){
+                        <p class="endGame shake" [ngClass]="{'color_X': competitor && winner, 'color_O': !competitor && winner}">
+                            {{winner ? namePlayer + messageGame : messageGame}}
+                        </p>
+                    }
+                    @else {
+                        <p class="turn_info">
+                            <span [ngClass]="{'color_X': competitor, 'color_O': !competitor}">{{namePlayer}}</span> turn.</p>
+                    }
+                </div>
+                <div class="table-ttt">
+                    @for(itemArray of boardArray; track itemArray.id){
+                        <xo-cell [cellInfo]="itemArray"
+                            [cellIndex]="itemArray.id"
+                            [statusCellDisabled]="itemArray.isDisabled"
+                            [coverCompetitor]="itemArray.value"
+                            (sharingLastSelectionEvent)="receiveCellEvent($event)"   
+                        ></xo-cell>
+                    }
+                </div>
+            </div> -->
+        </div>
     </div>
-</div>
+}
+

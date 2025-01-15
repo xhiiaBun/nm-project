@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { XoCellComponent } from "./xo-cell/xo-cell.component";
 import { Itemxo } from "../models/itemxo";
 import { CommonModule } from '@angular/common';
+import { ShareDataService } from '../services/share-data.service';
 
 
 @Component({
@@ -26,15 +27,27 @@ export class TictactoeComponent implements OnInit{
   blockOneUndo:  boolean = false;
   player1: number[] = [];
   player2: number[] = [];
+  displayTT: boolean = false;
 
-  constructor(){
+  constructor(private _shareDataService: ShareDataService){
     for(let i= 0; i < this.mainNumber*this.mainNumber; i++){
       let obj = {id: i, value: '', isDisabled: false};
         this.boardArray.push(obj);
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('!!!!! ngOnInit');
+    if(!this._shareDataService.getisGameZoneExpanded()){
+      this._shareDataService.setisGameZoneExpanded(true);
+      setTimeout(() => {
+        this.displayTT = true;
+      }, 1000);
+    }else{
+      this.displayTT = true;
+    }
+    
+  }
 
   receiveCellEvent(txt: string){
     this.lastCellTouched = Number(txt);

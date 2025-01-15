@@ -8,3 +8,8 @@
     flex-direction: row;
     align-items: center;
 }
+.xSpan{
+    font-size: 1rem;
+    color: #E91E63;
+    font-family: "Fredericka the Great", serif;
+}

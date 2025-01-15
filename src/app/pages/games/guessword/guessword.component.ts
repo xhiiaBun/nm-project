@@ -7,6 +7,7 @@ import { map, take } from 'rxjs/operators';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { wordGuardResolver } from '../../../guards/word-guard.resolver';
 import { CommonModule } from '@angular/common';
+import { ShareDataService } from '../services/share-data.service';
 
 @Component({
   selector: 'app-guessword',
@@ -19,12 +20,22 @@ export class GuesswordComponent implements OnInit{
   magic_word: any;
   dataResponse: any;
   dataR: string[] = [];
+  displayGW: boolean = false;
 
-  constructor(private _wordService: WordService, private _route: ActivatedRoute){
+  constructor(private _wordService: WordService, private _route: ActivatedRoute, private _shareDataService: ShareDataService){
   }
 
   ngOnInit(): void {
+    console.log('!!!!! ngOnInit');
     this.reNewGame();
+    if(!this._shareDataService.getisGameZoneExpanded()){
+      this._shareDataService.setisGameZoneExpanded(true);
+      setTimeout(() => {
+        this.displayGW = true;
+      }, 1000);
+    }else{
+      this.displayGW = true;
+    }
   }
 
   reNewGame(): void{

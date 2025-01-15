@@ -1,6 +1,6 @@
 <div class="container-fluid wrapper-nm-games" [ngClass]="{'cover-bck-tttword': displayingAGame === 'tictactoe', 'cover-bck-guessword': displayingAGame === 'guessword'}">
     <div class="row">
-        <div class="smart-col-games" [ngClass]="{'moving-left': gselected}">
+        <div class="smart-col-games" [ngClass]="{'moving-left': this.signalOutlet()}">
             @if(!showOutlet){
                  <h1 class="select-game animated" [ngClass]="{'fadeOut size-0': gselected}">
                     Select a Game
@@ -38,10 +38,8 @@
                 </ul>
             </div>
         </div>
-        <div class="smart-col-router-outlet" [ngClass]="{'giving-space': gselected}">
-            @if(showOutlet){
+        <div class="smart-col-router-outlet" [ngClass]="{'giving-space': this.signalOutlet()}">
                 <router-outlet />
-            }
         </div>
     </div>
 </div>
