@@ -32,7 +32,7 @@ export class GuesswordComponent implements OnInit{
       this._shareDataService.setisGameZoneExpanded(true);
       setTimeout(() => {
         this.displayGW = true;
-      }, 1000);
+      }, 1500);
     }else{
       this.displayGW = true;
     }

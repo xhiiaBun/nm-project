@@ -42,7 +42,7 @@ export class TictactoeComponent implements OnInit{
       this._shareDataService.setisGameZoneExpanded(true);
       setTimeout(() => {
         this.displayTT = true;
-      }, 1000);
+      }, 1500);
     }else{
       this.displayTT = true;
     }
