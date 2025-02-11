@@ -11,7 +11,7 @@ const animations = [
     //, border: "1px solid cyan"
     trigger("animateMenu", [
         state("desktop-alone", style({width: "70%"})),
-        state("mobile-alone", style({width: "70%"})),
+        state("mobile-alone", style({width: "80%"})),
         state("desktop-two", style({width: "30%"})),
         state("mobile-two", style({width: "100%"})),
         transition("desktop-alone <=> desktop-two", [animate("2s")]),

@@ -50,6 +50,7 @@ export class GamesComponent implements OnInit{
   yMouse: number = 0;
   cMouse = { x: this.xMouse, y: this.yMouse};
   nameTagsMenu = [''];
+  currentState = 'state1';
 
   menuDisplayAnimState$ = combineLatest([
     this.menuDisplay$,
@@ -119,6 +120,10 @@ export class GamesComponent implements OnInit{
 
   returnCoordinatesMouse(){
     return this.cMouse;
+  }
+
+  changeState(newState: string) {
+    this.currentState = newState;
   }
 
   ngOnDestroy(): void{

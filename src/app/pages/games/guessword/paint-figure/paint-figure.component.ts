@@ -11,8 +11,8 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
   animations: [
     trigger('colorTransition', [
       transition(':decrement', [animate('1s ease-in-out', 
-        style({ color: '#E91E63', fontSize: '2rem'})), 
-        animate('1s ease-in-out', style({fontSize: '1.3rem'}))])
+        style({ color: '#E91E63', fontWeight: 'bold'})), 
+        animate('1s ease-in-out', style({fontSize: '2rem'}))])
       ]
     )
   ]

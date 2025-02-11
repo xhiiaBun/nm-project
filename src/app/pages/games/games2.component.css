@@ -56,6 +56,19 @@
 .container-opts .ul-menu-games li{
     width: 100%;
 }
+.opacityEff{
+    animation: opacityR 1s linear;
+}
+@keyframes opacityR {
+    0%{
+        /* opacity: 0; */
+         transform: translateX(-1800px);
+    }
+    100%{
+        /* transform: translateX(0px); */
+         /* opacity: 1; */
+    }
+ }
 @media (max-width: 768px) {
     .wrapper-nm-games h1{
         font-size: 2rem;

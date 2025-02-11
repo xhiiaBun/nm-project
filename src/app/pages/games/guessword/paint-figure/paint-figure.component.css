@@ -10,4 +10,5 @@
 }
 .countAttempts{
     display: inline-block;
+    font-size: 2rem;
 }
