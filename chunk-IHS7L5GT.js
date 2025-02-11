@@ -1,1 +1,0 @@
-import{Ha as n,Q as a}from"./chunk-W73KYLNK.js";var t=class e{isGameZoneExpanded=n(!1);constructor(){}setisGameZoneExpanded(o){this.isGameZoneExpanded.set(o)}getisGameZoneExpanded(){return this.isGameZoneExpanded()}static \u0275fac=function(i){return new(i||e)};static \u0275prov=a({token:e,factory:e.\u0275fac,providedIn:"root"})};export{t as a};
