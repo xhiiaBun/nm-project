@@ -1,4 +1,95 @@
 <div class="row justify-content-center wrapper-nm-buildletter">
     <h2 class="title-game">Build your Letter</h2>
-    <img alt="Coming soon" src="assets/soon-rav.png"/>
+    @if(comingSoon){
+        <img alt="Coming soon" src="assets/soon-rav.png"/>
+    }
+    @else {
+        <div class="col-10 wrapper-form-letter">
+            <form [formGroup]="letterForm" (ngSubmit)="submit()">
+                <div class="row form-contnr">
+                    <div class="col-lg-4 col-xs-12 letter-visual">
+                        <div class="letter-cover-wr">
+                            <div class="letter-thm hp-theme">
+                                {{textLetter }}
+                            </div>
+                            <div class="background-thm"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-xs-12 letter-details">
+                        <div class="row">
+                            <!--init: Color-->
+                            <div class="one-section col-12">
+                                <div class="intitle">
+                                    <h3>Select a Background Color: <span class="indetails">(max 4 colors)</span></h3>
+                                </div>
+                                <div class="multi-options" formArrayName="backgroundColors">
+                                    <div class="form-check" *ngFor="let color of colors; let i = index;">
+                                        <input type="checkbox" [formControlName]="i" class="form-check-input" id="color-{{color.id}}" [value]="color.id"/>    
+                                        <label for="color-{{color.id}}" class="form-check-label" >{{color.name}}</label>
+                                    </div>
+                                    <!-- <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="color-white" value="white"/>    
+                                        <label for="color-white" class="form-check-label" >White</label>
+                                    </div>
+                                
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="color-purple" value="purple"/>    
+                                        <label for="color-purple" class="form-check-label" >Purple</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="color-green" value="green"/>    
+                                        <label for="color-green" class="form-check-label" >Green</label>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <!--end: Color-->
+                        </div>
+
+                        <!--init: Theme-->
+                        <div class="row">
+                            <!--init: Theme?-->
+                            <div class="one-section col-lg-6 col-xs-12">
+                                <div class="intitle">
+                                    <h3>Do you want to choose a Theme for your letter?</h3>
+                                </div>
+                                <div class="multi-options" formGroupName="questionTheme">
+                                    <div class="form-check">
+                                        <input type="radio" formControlName="addTheme" class="form-check-input" name="addTheme" id="yes-theme" value="true"/>    
+                                        <label for="yes-theme" class="form-check-label" >Yes</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" formControlName="addTheme" class="form-check-input" name="addTheme" id="no-theme" value="false"/>    
+                                        <label for="no-theme" class="form-check-label" >No</label>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="one-section col-lg-6 col-xs-12">
+                                <h3>Choose a Theme:</h3>
+                                <select formControlName="theme" classs="form-select" aria-label="Please select an option">
+                                    <option *ngFor="let theme of themeOptions; let i = index;"
+                                        [value]="theme.themeId">{{ theme.themeName}}</option>
+                                </select>
+                            </div>
+                            <!--end: Theme?-->
+                        </div>
+                        <!--end: Theme-->
+
+                        <!--init: Text-->
+                        <div class="row">
+                            <div class="one-section col-12">
+                                <h3>Add some Text:</h3>
+                                <textarea formControlName="text"></textarea>
+                            </div>
+                        </div>
+                        <!--end: Opt Theme-->
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn btn-primary" [disabled]="!letterForm.valid" (click)="saveForm()">Save</button>
+                </div>
+            </form>
+        </div>
+    }
+    
 </div>

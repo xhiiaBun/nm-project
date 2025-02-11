@@ -1,0 +1,88 @@
+.wrapper-nm-games{
+    height: 100%;
+    text-align: center;
+    font-size: 3rem;
+}
+.ul-menu-games{
+    padding-left: 0;
+}
+.ul-menu-games li{
+    list-style-type: none;
+    margin-top: 2rem;
+    width: 80%;
+    display: flex;
+    border-bottom: 3px solid #9E9E9E;
+    font-family: "IM Fell Great Primer SC";
+    letter-spacing: 0.5rem;
+    
+}
+.ul-menu-games li:hover{
+    border-bottom: 3px solid rgb(0, 150, 136);
+}
+.ul-menu-games li a{
+    display: block;
+    width: 100%;
+    padding: 3rem 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.ul-menu-games li.li-game.active{
+    background: rgba(142, 14, 144, 0.1);
+    border-bottom: 3px solid rgb(142, 14, 144);
+} 
+.ul-menu-games li.li-game.active a, .ul-menu-games li.li-game.active a:active{
+    font-weight: bold;
+    /* color: rgb(142, 14, 144) !important; */
+}
+.game-ttt-bckg{
+    background-image: url('/assets/Tttn_bckg.png');
+    background-size: cover;
+    background-position: center;
+}
+.game-gw-bckg{
+    background-image: url('/assets/guessgwd_bckg.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: space;
+}
+
+.container-opts h1{
+    font-size: 3rem;
+}
+.container-opts .ul-menu-games{
+    font-size: 2rem;
+}
+.container-opts .ul-menu-games li{
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .wrapper-nm-games h1{
+        font-size: 2rem;
+    }
+    .ul-menu-games li{
+        font-size: 2rem;
+        line-height: 3rem;
+        width: 100%;
+    }
+    .ul-menu-games li a{
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .ul-menu-games li{
+        margin-top: 0;
+    }
+    .container-opts .ul-menu-games{
+        display: flex;
+    }
+    .container-opts .ul-menu-games li{
+        font-size: 1rem;
+    }
+    .container-opts .ul-menu-games li a{
+        padding: 0.5rem;
+        line-height: 1.2rem;
+        background-image: none;
+    }
+}

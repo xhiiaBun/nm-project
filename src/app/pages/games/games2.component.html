@@ -1,0 +1,35 @@
+<div class="container-fluid wrapper-nm-games">
+    <div class="row justify-content-center">
+            <div class="col-12" [@animateMenu]="menuDisplayAnimState$ | async" [ngClass]="{'container-opts': menu_opts}"
+                (mousemove)="onMouseTracking($event)">
+                <h1 class="">
+                    Select a Game
+                </h1>
+                <div>
+                    <ul class="ul-menu-games">
+                        <li class="li-game" #gamettt [ngClass]="{'active': displayingAGame == 'tictactoe'}">
+                            <a class="game-ttt-bckg" routerLink="tictactoe" (click)="selectingAGame('tictactoe')">
+                                Tic-tac-toe
+                            </a>
+                        </li>
+                        <li style="justify-self: end;" class="li-game" #gamegw [ngClass]="{'active': displayingAGame == 'guessword'}">
+                            <a class="game-gw-bckg" routerLink="guessword" (click)="selectingAGame('guessword')">
+                                Guess the word!
+                            </a> 
+                        </li>
+                        <li class="li-game" #gamebl [ngClass]="{'active': displayingAGame == 'buildletter'}">
+                            <a class="game-comingsoon" routerLink="buildletter" (click)="selectingAGame('buildletter')">
+                                Build your letter
+                            </a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div [@animateGameSection]="menuDisplayAnimState$ | async">
+                <!-- @if(!displayingAGame){
+                    <raven-indicator [coordMouse]="returnCoordinatesMouse()" [nameElements]="nameTagsMenu"></raven-indicator>
+                } -->
+                    <router-outlet />
+            </div>          
+    </div>
+</div>

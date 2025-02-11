@@ -9,7 +9,7 @@
 }
 .title-game{
     font-family: "IM Fell Great Primer SC";
-    margin: 12px 0px 0px;
+    line-height: 3.5rem;
 }
 .wr-board-ttt{
     min-height: 250px;

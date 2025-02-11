@@ -1,0 +1,12 @@
+.container-raven-ind{
+    position: relative;
+    height: 100%;
+}
+
+.wrapper-raven-ind{
+    position: absolute;
+    top: 0;
+}
+.rotated{
+    transform: rotate(240deg);
+}

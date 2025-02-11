@@ -3,7 +3,7 @@
     <div class="row justify-content-center wrapper-nm-guessword">
     <h2 class="title-game">Guess the Word</h2>
         <div class="col-10">
-            @if(magic_word){
+            @if(wordStatusSignal()){
             <div class="text-end">
                 <button class="btn btn-primary" (click)="reNewGame()">New Game</button>
             </div>
@@ -25,4 +25,8 @@
             
         </div>
     </div>
+}
+
+@else {
+    <raven-loading></raven-loading>
 }

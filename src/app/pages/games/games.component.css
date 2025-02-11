@@ -2,10 +2,6 @@
     height: 100%;
     text-align: center;
     font-size: 3rem;
-    /* background-image: url('/assets/ggbckg25.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left; */
 }
 .cover-bck-guessword{
     background-image: url('/assets/wordbckg25.png');

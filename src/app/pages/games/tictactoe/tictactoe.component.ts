@@ -4,12 +4,12 @@ import { XoCellComponent } from "./xo-cell/xo-cell.component";
 import { Itemxo } from "../models/itemxo";
 import { CommonModule } from '@angular/common';
 import { ShareDataService } from '../services/share-data.service';
-
+import { RavenLoadingComponent } from '../../../animations/raven-loading/raven-loading.component';
 
 @Component({
   selector: 'app-tictactoe',
   standalone: true,
-  imports: [RouterModule, XoCellComponent, CommonModule],
+  imports: [RouterModule, XoCellComponent, CommonModule, RavenLoadingComponent],
   templateUrl: './tictactoe.component.html',
   styleUrl: './tictactoe.component.css'
 })
@@ -37,15 +37,11 @@ export class TictactoeComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    console.log('!!!!! ngOnInit');
-    if(!this._shareDataService.getisGameZoneExpanded()){
-      this._shareDataService.setisGameZoneExpanded(true);
-      setTimeout(() => {
+    this._shareDataService.setSelectedGame('tictactoe');
+    console.log('Signal game selected: ', this._shareDataService.getSelectedGame());
+    setTimeout(() => {
         this.displayTT = true;
-      }, 1500);
-    }else{
-      this.displayTT = true;
-    }
+    }, 2500);
     
   }
 

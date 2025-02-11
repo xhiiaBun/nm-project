@@ -1,4 +1,91 @@
 .title-game{
     font-family: "IM Fell Great Primer SC";
-    margin: 12px 0px 0px;
+    line-height: 3.5rem;
+}
+.wrapper-form-letter{
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+.wrapper-nm-buildletter h3{
+    font-size: 1.25rem;
+}
+.form-contnr{
+    flex-direction: row;
+}
+.wrapper-form-letter .row{
+    margin-bottom: 1rem;
+}
+.one-section{
+    padding: 1rem 0.5rem;
+}
+.intitle{
+    display: block;
+    text-align: start;
+}
+.letter-cover-wr{
+    height: 28rem; 
+    margin: auto;
+    background-image: url('/assets/letter-backgr.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.letter-thm{
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0.5rem;
+    align-content: center;
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px pink;
+    overflow: auto;
+}
+.hp-theme{
+    background-image: url('/assets/hp-thm25.png');
+    background-size: cover;
+    font-family: "IM Fell Great Primer SC";
+}
+.xmas-theme{
+    background-image: url('/assets/xmas-thm25.png');
+    background-size: cover;
+    font-family: "Mountains of Christmas", serif;
+}
+.background-thm{
+    width: 100%;
+    height: 100%;
+    background: purple;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.multi-options{
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.multi-options div{
+    padding-right: 1rem;
+}
+.indetails{
+    font-size: 1rem;
+}
+.letter-visual{
+    order: 1;
+}
+.letter-details{
+    order: 2;
+}
+@media (max-width: 576px) {
+    .letter-visual{
+        order: 2;
+    }
+    .letter-details{
+        order: 1;
+    }
+    .letter-cover-wr{
+        height: 25rem;
+    }
 }
