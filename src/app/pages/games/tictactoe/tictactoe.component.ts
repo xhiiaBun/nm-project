@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { XoCellComponent } from "./xo-cell/xo-cell.component";
 import { Itemxo } from "../models/itemxo";
 import { CommonModule } from '@angular/common';
-import { ShareDataService } from '../services/share-data.service';
+import { ShareDataService } from '../../../services/share-data.service';
 import { RavenLoadingComponent } from '../../../animations/raven-loading/raven-loading.component';
 
 @Component({

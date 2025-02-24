@@ -3,3 +3,8 @@ export interface Itemxo{
     isDisabled: boolean
     value: string
 }
+
+export interface Word{
+    word: string
+    phrase: string
+}

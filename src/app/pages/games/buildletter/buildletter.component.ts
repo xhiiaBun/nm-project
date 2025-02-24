@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ShareDataService } from '../services/share-data.service';
+import { ShareDataService } from '../../../services/share-data.service';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, FormArray, FormBuilder, ReactiveFormsModule, Validators, AbstractControl } from '@angular/forms';
 

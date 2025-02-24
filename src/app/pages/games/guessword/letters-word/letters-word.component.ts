@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Itemxo } from "../../models/itemxo";
-import { WordService } from "../../services/get-word-service.service";
+import { WordService } from "../../../../services/get-word-service.service";
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -36,7 +36,7 @@ export class LettersWordComponent implements OnInit{
   }
 
   initGameWord(data: any): void{
-    this.magic_word = data;
+    this.magic_word = data.word.toUpperCase();
     this.numberTries = this.magic_word.length;
     this.arrayWord = [...this.magic_word];
     this.messageGame = "";
@@ -63,6 +63,7 @@ export class LettersWordComponent implements OnInit{
 
   updateLetter(letter: Itemxo): void{
       let isletterInWord = this.arrayWord.includes(letter.value);
+      console.log('Click letter: ', letter, this.arrayWord, isletterInWord)
       if(!isletterInWord){
         this.numberTries--;
         this._wordService.updateAttempt(this.numberTries);

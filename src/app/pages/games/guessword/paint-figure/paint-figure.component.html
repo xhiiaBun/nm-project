@@ -6,7 +6,16 @@
                 <p>Good luck next time.</p>
             }
             @else {
-                 <div>You have <div class="countAttempts" [@colorTransition]="numberAttempts">{{numberAttempts || mg_len}}</div> attempts from {{mg_len}}.</div>
+                <div class="phrase-word">
+                    <p class="hint-inst">See the Hint:</p>
+                    <blockquote class="blockquote">
+                        <p class="mb-0 add-quotes">{{magic_phrase}}</p>
+                        <footer class="blockquote-footer text-center name-author">
+                            <cite title="Source Title">Edgar Allan Poe</cite>
+                        </footer>
+                    </blockquote>
+                </div>
+                <div><div class="countAttempts" [@colorTransition]="numberAttempts">{{numberAttempts || mg_len}}</div>/{{mg_len}} Attempts</div>
             }
            
         </div>        

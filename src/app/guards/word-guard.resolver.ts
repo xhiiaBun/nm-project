@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot, ResolveFn } from '@angular/router';
 import { Observable } from 'rxjs';
-import { WordService } from '../pages/games/services/get-word-service.service';
+import { WordService } from '../services/get-word-service.service';
 
 @Injectable({
   providedIn: 'root'

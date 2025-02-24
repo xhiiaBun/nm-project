@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { ShareDataService } from './services/share-data.service';
+import { ShareDataService } from '../../services/share-data.service';
 import { BehaviorSubject, combineLatest, fromEvent, Observable, switchMap } from 'rxjs';
 import { map, startWith } from "rxjs/operators";
 import { getAnimations } from '../../animations/animenu/animenu';

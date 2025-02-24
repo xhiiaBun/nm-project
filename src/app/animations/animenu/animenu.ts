@@ -14,8 +14,8 @@ const animations = [
         state("mobile-alone", style({width: "80%"})),
         state("desktop-two", style({width: "30%"})),
         state("mobile-two", style({width: "100%"})),
-        transition("desktop-alone <=> desktop-two", [animate("2s")]),
-        transition("mobile-alone <=> mobile-two", [animate("2s")])
+        transition("desktop-alone <=> desktop-two", [animate("1s")]),
+        transition("mobile-alone <=> mobile-two", [animate("1s")])
     ]),
 
     //, border: "1px solid purple"

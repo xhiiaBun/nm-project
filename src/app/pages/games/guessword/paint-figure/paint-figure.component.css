@@ -12,3 +12,29 @@
     display: inline-block;
     font-size: 2rem;
 }
+.phrase-word{
+    font-family: 'IM Fell Great Primer SC';
+    font-size: 1.5rem;
+    line-height: 1.3rem;
+    margin-bottom: 1rem;
+    color: #cac6c6;
+}
+.hint-inst{
+    color: #b9a2c6;
+}
+.blockquote .name-author{
+    margin-top: 0rem;
+    color: #b9a2c6;
+}
+.add-quotes::before, .add-quotes::after{
+    font-family: monospace;
+    content: '"';
+    font-size: 1.2rem;
+    line-height: 0;
+}
+@media (max-width: 576px) {
+    .phrase-word{
+        text-align: start;
+    }
+}
+
