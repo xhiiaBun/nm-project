@@ -40,7 +40,6 @@ export class GuesswordComponent implements OnInit{
 
   callWords(): void{
     this._wordService.requestListWords().pipe(take(1)).subscribe(data =>{
-      console.log('Data list: ', data);
       let listData: any = data;
       this.dataResponse = [...listData].filter(li => li.phrase);
       this.reNewGame();
@@ -52,7 +51,6 @@ export class GuesswordComponent implements OnInit{
     let maxNum  = this.dataResponse?.length;
     let randomNum = this.returnRandom(maxNum-1);
     this.magic_word = this.dataResponse[randomNum];
-    console.log('Random: ', randomNum, this.dataResponse[randomNum]);
 
       this._wordService.sharedWord(this.dataResponse[randomNum]);
       this._wordService.updateAttempt(this.magic_word.length);
