@@ -44,13 +44,13 @@
                             </div>  
                         </div>
                         <div class="row">
-                            @if(singleAuthor){
+                            <!-- @if(singleAuthor){
                                 <div class="author-info">
                                     <author [data]="singleAuthor"></author>
                                 </div>
-                            }
+                            } -->
                             
-                            <div [ngClass]="{'collection-quotes-wauthor': singleAuthor, 'collection-quotes': !singleAuthor}">
+                            <div class="collection-quotes"><!--<div [ngClass]="{'collection-quotes-wauthor': singleAuthor, 'collection-quotes': !singleAuthor}">-->
                                 <quotes [data]="quotesCollection"></quotes>
                             </div>
                         </div>
