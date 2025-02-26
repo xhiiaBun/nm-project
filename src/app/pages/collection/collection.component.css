@@ -1,0 +1,101 @@
+.wrapper-nm-collection h1{
+    font-size: 4rem;
+}
+.details-authors{
+    text-align: start;
+    font-family: "IM Fell Great Primer SC";
+}
+.btn-author{
+    width: 100%;
+    font-family: "IM Fell Great Primer SC";
+    border: 1px  solid #9C27B0;
+    color: #e4acee;
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.btn-author.active .btn-author:focus-visible, 
+.btn-author:hover, .btn-author:focus, 
+.btn-author:focus-within {
+    outline: 1px solid #fff;
+}
+.btn-inauthor.active > span .btn-inauthor:focus-visible > span, 
+.btn-inauthor:hover > span, .btn-inauthor:focus > span, 
+.btn-inauthor:focus-within > span{
+    border-bottom: 4px solid darkcyan;
+}
+.cont-auth{
+    max-height: 7rem;
+    overflow: auto;
+}
+.wr-initial{
+    font-size: 7rem;
+    font-family: "IM Fell Great Primer SC";
+}
+.wr-author{
+    text-align: left;
+    align-content: space-evenly;
+    font-family: "IM Fell Great Primer SC";
+    font-size: 1.2rem;
+}
+.btn-inauthor{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+.btn-inauthor > span{
+    border-bottom: 4px solid white;
+}
+
+.author-info{
+    width: 40%;
+}
+.collection-quotes-wauthor{
+    width: 60%;
+}
+.collection-quotes{
+    width: 100%;
+}
+@media (max-width: 576px) {
+    .wrapper-nm-collection h1{
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+    .wrapper-abc-authors{
+        padding: 0;
+        width: 50%;
+    }
+    .details-authors h2{
+        font-size: 1.25rem;
+    }
+    .wrapper-abc-authors .btn-author{
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+    .cont-auth{
+        max-height: 4rem;
+        overflow: auto;
+    }
+    .wr-initial{
+        font-size: 3rem;
+        width: 35%;
+    }
+    .wr-author{
+        width: 65%;
+    }
+    .btn-inauthor{
+        font-size: 1rem;
+        margin: 0 0 0.25rem;
+        padding: 0;
+        text-align: left;
+    }
+    .btn-inauthor > span{
+        border-bottom: 2px solid white;
+    }
+    .author-info{
+        width: 100%;
+    }
+    .collection-quotes-wauthor{
+        width: 100%;
+    }
+}

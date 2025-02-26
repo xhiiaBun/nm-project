@@ -25,23 +25,41 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" 
+                  routerLink="/collection"
+                  routerLinkActive="active"
+                  ariaCurrentWhenActive="page"
+                  (click)="closingNavbar()"
+                  >Collection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" 
                   routerLink="/games"
                   routerLinkActive="active"
                   ariaCurrentWhenActive="page"
                   (click)="closingNavbar()"
                   >Games</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" 
                   routerLink="/contact"
                   routerLinkActive="active"
                   ariaCurrentWhenActive="page"
                   (click)="closingNavbar()"
                   >Contact</a>
-            </li>
+            </li> -->
           </ul>
         </div>
     </div>
+    <!--<div class="signin-details">
+      <user-auth></user-auth>
+       <a class="navbar-brand" 
+        routerLink="/signin"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page">
+        Sign In
+      </a> 
+    </div>-->
+    
   </nav>
   <main>
       <router-outlet />

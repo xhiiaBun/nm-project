@@ -8,6 +8,7 @@
     z-index: 100;
     background: rgba(23, 15, 22, 0.96);
     width: 100%;
+    justify-content: flex-end;
 }
 main{
     height: 100vh;
@@ -31,9 +32,21 @@ main{
     color: #fff;
     text-decoration: underline;
 }
+.signin-details{
+    font-size: 1rem;
+    align-self: flex-start;
+}
 @media (max-width: 768px) {
     .logo-img{
         width: 250px;
+    }
+}
+@media (max-width: 576px) {
+    .navbar-nm-nv{
+        height: 7.5rem;
+    }
+    main{
+        padding-top: 7.5rem;
     }
 }
 @media (max-width: 375px) {

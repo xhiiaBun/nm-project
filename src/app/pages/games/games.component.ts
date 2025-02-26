@@ -72,7 +72,6 @@ export class GamesComponent implements OnInit{
     console.log('Signal game selected: ', this._shareDataService.getSelectedGame());
     let urlStr = this._router.routerState.snapshot.url;
     let splitUrl = urlStr.split('/');
-    console.log('Spliiit: ', splitUrl);
 
     this.nameTagsMenu = ['gamettt', 'gamegw', 'gamebl'];
 

@@ -10,6 +10,11 @@ export const routes: Routes = [
         loadComponent: () => import('./home/home.component').then((home) => home.HomeComponent)
     },
     {
+        path: 'collection',
+        title: 'Nightmore | Collection',
+        loadComponent: () => import('./collection/collection.component').then((coll) => coll.CollectionComponent)
+    },
+    {
         path: 'games',
         title: 'Nightmore | Games',
         loadComponent: () =>
@@ -34,6 +39,12 @@ export const routes: Routes = [
         title: 'Nightmore | Contact',
         loadComponent: () =>
             import('./contact/contact.component').then((contact) => contact.ContactComponent)
+    },
+    {
+        path: 'signin',
+        title: 'Nightmore | Sign In',
+        loadComponent: () =>
+            import('./signin/signin.component').then((signin) => signin.SigninComponent)
     },
     { 
         path: '',
